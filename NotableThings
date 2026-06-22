@@ -1,3 +1,8 @@
+/*
+This repository is for personal learning and practice in Java, Git, and workflow documentation.
+Key checkpoints are tracked here to highlight progress and notable updates.
+*/
+
 👉 My advice: always use git stash apply instead of pop when experimenting,
  so the stash entry remains safe. Once you’re confident, you can drop it manually.
 
@@ -6,6 +11,13 @@
  **checkout code from a GitHub repository,
 
  git clone https://github.com/<username>/<repo>.git
+
+ If the branch already exists locally:
+ git checkout branch-name
+ If it’s only on remote (e.g., origin/master):
+ git checkout -b branch-name origin/branch-name
+ Update your local branch with latest remote changes
+ git pull origin branch-name
 
  **List all branches:
  git branch -a
@@ -21,3 +33,31 @@ git branch   # check branch name
 git push origin master   # or whatever branch name shows
 
 =================
+🌳 Recommended Branch Structure
+
+main (or master):
+Stable production-ready code
+Only merge tested, reviewed code here. Tagged for releases.
+
+develop
+Integration branch for ongoing development
+Features and fixes are merged here before going to main.
+
+feature/*
+Individual features or enhancements
+Create from develop, work on the feature, then merge back into develop.
+
+bugfix/*
+Fixes for non-critical issues
+Same workflow as features, but focused on bug resolution.
+
+release/*
+Pre-release stabilization
+Branch off develop when preparing a release. Only bug fixes and documentation updates allowed.
+
+hotfix/*
+Urgent fixes for production
+Branch off main, fix the issue, merge into both main and develop.
+
+=================
+
