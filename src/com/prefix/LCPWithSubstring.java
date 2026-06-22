@@ -25,9 +25,9 @@ public class LCPWithSubstring {
         String fw = strs[0];
         String lw = strs[strs.length - 1];
         int index = 0;
-        while (strs.length > 0) {
+        while (fw.length() > index && lw.length() > 0) {
             //perform the operation
-            if (fw.charAt(index)==lw.charAt(index)) {
+            if (fw.charAt(index) == lw.charAt(index)) {
                 index++;
             } else {
                 break;
@@ -35,6 +35,6 @@ public class LCPWithSubstring {
         }
         //termary:
 
-        return index==0?"":fw.substring(0,index);
+        return index == 0 ? "" : fw.substring(0, index);
     }
 }
