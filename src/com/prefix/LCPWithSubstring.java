@@ -20,6 +20,7 @@ public class LCPWithSubstring {
     }
 
     private static String longestCommonPrefix1(String[] strs) {
+        if(strs==null  || strs.length==0) return "";
         Arrays.sort(strs);
 
         String fw = strs[0];
