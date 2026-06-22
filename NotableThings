@@ -1,0 +1,23 @@
+👉 My advice: always use git stash apply instead of pop when experimenting,
+ so the stash entry remains safe. Once you’re confident, you can drop it manually.
+
+ Templates/cmd for My Daily used while working with git :
+ =================================================
+ **checkout code from a GitHub repository,
+
+ git clone https://github.com/<username>/<repo>.git
+
+ **List all branches:
+ git branch -a
+ git status
+ git log -n
+
+ ** for Commiting :
+ =================
+git status
+git add src/com/hm/ContainDuplicates.java
+git commit -m "req mesg"
+git branch   # check branch name
+git push origin master   # or whatever branch name shows
+
+=================
