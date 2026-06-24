@@ -36,7 +36,6 @@ public class diagonalSumMtx {
             sum = sum - mat[n / 2][n / 2];
         }
 
-
         return sum;
     }
 }
