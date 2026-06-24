@@ -30,7 +30,6 @@ public class FindTheDifferance {
 
         }
 
-
         return (char) total;
     }
 }
