@@ -1,0 +1,18 @@
+You can edit a Git commit message even after committing,
+but the method depends on whether you’ve already pushed it to a remote repository.
+
+If the commit is local (not pushed yet):
+Use the --amend option
+#git commit --amend
+
+⚠️ If the commit is already pushed:
+You can still amend it, but you’ll need to force-push:
+#git commit --amend -m "New commit message"
+#git push --force
+⚠️ Warning: Force-pushing rewrites history, which can cause issues for others working on the same branch.
+Only do this if you’re sure it won’t disrupt teammates.
+
+Each commit appears as a single line (short hash + message). Great for quick scanning.
+#git log --oneline
+#git show <commit-hash>
+
