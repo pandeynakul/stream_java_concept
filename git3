@@ -1,0 +1,17 @@
+Check the remote URL (origin):
+#git remote -v
+
+Check the current branch:
+#git branch --show-current
+
+Check repository status:
+#git status
+
+🧾 Configuration Details:
+==========================
+View repo-specific config:
+#git config --list --local
+
+Check global config (applies to all repos):
+#git config --list --global
+
