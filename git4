@@ -1,0 +1,15 @@
+Option 1: Merge remote changes into your local branch
+#git checkout main
+#git pull origin main   # brings remote changes into local main
+#git push origin main   # now push your local commits
+
+Option 2: Force overwrite remote (⚠️ destructive)
+If you’re absolutely sure you want your local code to completely replace what’s on GitHub:
+#git push origin main --force
+⚠️ Warning: This will discard any commits that exist on the remote main but not in your local branch.
+Only use this if you know the remote history isn’t needed.
+
+Option 3: Push master directly into main
+If your local master branch has the code you want, and you want to overwrite remote main:
+#git push origin master:main --force
+This pushes your local master branch into the remote main branch.
