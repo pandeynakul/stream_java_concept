@@ -10,11 +10,11 @@ import java.util.stream.Collectors;
 //find the average of salary then print the employee above and below avg salary
 public class EmployeeOperation {
     public static void main(String[] args) {
-        List<Employee> list = Arrays.asList(new Employee("Rahul", 1, 2300.0, "lucknow"),
+        List<Employee> list = Arrays.asList(new Employee("ankit", 1, 2300.0, "lucknow"),
                 new Employee("Rahul", 1, 5000.0, "Mumbai"),
-                new Employee("Rahul", 1, 10000.0, "Nagpur"),
-                new Employee("Rahul", 1, 15000.0, "Bangalore"),
-                new Employee("Rahul", 1, 43000.0, "Delhi"));
+                new Employee("ajay", 1, 10000.0, "Nagpur"),
+                new Employee("santosh", 1, 15000.0, "Bangalore"),
+                new Employee("ragav", 1, 43000.0, "Delhi"));
 
         Double avgSalary = averageSalary(list);
         System.out.println(avgSalary);
@@ -42,6 +42,12 @@ public class EmployeeOperation {
             }
 
         }
+        System.out.println("--------------");
+        map.forEach((salary, employees) -> {
+            System.out.println("salary " + salary);
+            employees.forEach(e -> System.out.println("Employees : " + e.getEmpName()));
+
+        });
 
 
     }
