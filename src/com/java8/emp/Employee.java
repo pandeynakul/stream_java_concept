@@ -7,16 +7,26 @@ public class Employee {
     private String empName;
 
 
-
     private Integer empId;
     private Double salary;
     private String cityName;
+    private Integer age;
 
-    public Employee(String empName, Integer empId, Double salary, String cityName) {
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public Employee(String empName, Integer empId, Double salary, String cityName, Integer age) {
         this.empName = empName;
         this.empId = empId;
         this.salary = salary;
         this.cityName = cityName;
+        this.age = age;
     }
 
     public String getEmpName() {
@@ -52,21 +62,13 @@ public class Employee {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-    @Override
     public String toString() {
         return "Employee{" +
                 "empName='" + empName + '\'' +
                 ", empId=" + empId +
                 ", salary=" + salary +
                 ", cityName='" + cityName + '\'' +
+                ", age=" + age +
                 '}';
     }
 
