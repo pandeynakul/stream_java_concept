@@ -44,8 +44,15 @@ public class EmployeeOperation {
         employeeOperation.sortByAgeAndSalary(list);
         System.out.println("=======*:grp by city:*=======");
         employeeOperation.grpByCIty(list);
+        System.out.println("=======*:3rd highest salary:*=======");
+        employeeOperation.thirdHighestSal(list);
 
+    }
 
+    private void thirdHighestSal(List<Employee> list) {
+       Double sal3rdHi =list.stream().sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
+                .map(Employee::getSalary).skip(2).findFirst().get();
+        System.out.println(sal3rdHi);
     }
 
     private void grpByCIty(List<Employee> list) {
